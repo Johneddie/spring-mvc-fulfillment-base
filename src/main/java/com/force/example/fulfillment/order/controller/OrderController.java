@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.force.example.fulfillment.order.model.Order;
 import com.force.example.fulfillment.order.service.OrderService;
+import main.java.com.force.example.fulfillment.order.controller.TransferBean;
 
 @Controller
 @RequestMapping(value="/order")
@@ -74,9 +75,15 @@ public class OrderController {
 		}
 	}
 	
-	@RequestMapping(method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody List<Order> getOrders() {
 		return orderService.listOrders();
+	}
+	
+	@RequestMapping(value="/getPing", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody TransferBean getPing(@RequestBody TransferBean transferBean) {
+		
+		return transferBean;
 	}
 
 	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
