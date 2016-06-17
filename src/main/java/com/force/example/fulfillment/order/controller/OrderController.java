@@ -23,9 +23,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import com.force.example.fulfillment.order.controller.ResourceNotFoundException;
 import com.force.example.fulfillment.order.model.Order;
 import com.force.example.fulfillment.order.service.OrderService;
-import main.java.com.force.example.fulfillment.order.controller.TransferBean;
 
 @Controller
 @RequestMapping(value="/order")

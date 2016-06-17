@@ -1,4 +1,6 @@
-package main.java.com.force.example.fulfillment.order.controller;
+package com.force.example.fulfillment.order.controller;
+
+
 
 import java.math.BigDecimal;
 
